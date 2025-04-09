@@ -21,6 +21,7 @@ function App() {
             <div style={{
                 display:'flex',
             }}>
+                <div className="card" style={{ width: "18rem", marginRight:'10px' }}>
                     <img src={data.prod1.imgUrl} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title">{data.prod1.title}</h5>
