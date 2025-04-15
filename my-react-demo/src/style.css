@@ -15,3 +15,7 @@ h1{
 .img1{
     width: 50%;
 }
+
+.img:hover{
+    transform: scale(1.5);
+}
