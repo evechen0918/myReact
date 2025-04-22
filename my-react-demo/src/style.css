@@ -1,21 +1,10 @@
-body{
-    background-color: #ddd;
-}
-#container{
-    width: 768px;
-    margin: auto;
-    /* border: 1px solid red; */
-    background-color: azure;
-    padding: 20px;
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box
 }
 
-h1{
-    font-size: 24px;
-}
-.img1{
-    width: 50%;
-}
-
-.img:hover{
-    transform: scale(1.5);
-}
+body {
+        background-color: #eee;
+        color:#fff
+    }
