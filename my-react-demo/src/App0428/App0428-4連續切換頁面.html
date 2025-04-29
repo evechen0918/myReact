@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>換頁面</title>
+</head>
+<body>
+  <div id="page1">第一頁</div>
+  <div id="page2" style="display:none;">第二頁</div>
+  <div id="page3" style="display:none;">第三頁</div>
+
+  <button onclick="changePage(-1)" id="prev" style="display:none;">上一頁</button>
+  <button onclick="changePage(1)" id="next">下一頁</button>
+
+  <script>
+    var now = 1; // 現在第幾頁，一開始是第1頁
+
+    function changePage(move) {
+      // 第1步：改變現在的頁數
+      now = now + move;
+      if (now < 1) now = 1; // 不可以小於第1頁
+      if (now > 3) now = 3; // 不可以大於第3頁
+
+      // 第2步：根據現在頁數，顯示正確的頁面，其他隱藏
+      document.getElementById('page1').style.display = (now == 1) ? 'block' : 'none';
+      document.getElementById('page2').style.display = (now == 2) ? 'block' : 'none';
+      document.getElementById('page3').style.display = (now == 3) ? 'block' : 'none';
+
+      // 第3步：控制上一頁/下一頁按鈕的顯示
+      document.getElementById('prev').style.display = (now == 1) ? 'none' : 'inline-block';
+      document.getElementById('next').style.display = (now == 3) ? 'none' : 'inline-block';
+    }
+  </script>
+</body>
+</html>

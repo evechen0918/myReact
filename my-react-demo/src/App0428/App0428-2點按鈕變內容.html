@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>HTML DOM畫面操作</h2>
+    <div id="content">練習網頁畫面的操作</div>
+    <button onclick="change();">click</button>
+    <script>
+        function change() {
+            //第一步：取得標籤物件
+            let content = document.querySelector("#content")
+            //第二步：變成什麼樣子
+            content.innerHTML = "內容已經更新"
+            content.className="text";
+            content.style.fontSize="30px";
+            content.style.color="red"
+        }
+
+    </script>
+</body>
+
+</html>

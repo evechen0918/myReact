@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <span onclick="changeToAbout()">ABOUT</span>
+        <span onclick="changeToNews()">NEWS</span>
+    </div>
+    <hr>
+    <div id="about">大家好</div>
+    <div id="news" style="display: none;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, magnam voluptatibus saepe voluptatem eaque
+        necessitatibus, nobis molestiae explicabo asperiores amet delectus? Dolorem ipsa ab nostrum cumque earum debitis
+        officia. Quibusdam?
+    </div>
+
+    <script>
+        function changeToNews(){
+            //第一步：按下New隱藏About
+            let about=document.querySelector('#about');
+            about.style.display="none"
+            //第二步：顯示New
+            let news=document.querySelector('#news');
+            news.style.display="block";
+        }
+        function changeToAbout(){
+            let news=document.querySelector('#news');
+            news.style.display="none"
+
+            let about=document.querySelector('#about');
+            about.style.display="block";
+        }
+    </script>
+
+
+
+</body>
+
+</html>

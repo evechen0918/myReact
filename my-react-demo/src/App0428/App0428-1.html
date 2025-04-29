@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <button id="btn1">跳轉頁面</button>
+    <script>
+        //window物件底下的常用方法
+        window.alert('我是訊息視窗')
+        window.prompt('我是輸入視窗','這邊可以輸入預設值')
+        
+        //window物件底下的常用屬性，視窗寬高
+        console.log(`視窗目前寬度:'${window.innerWidth}`);
+        console.log(`視窗目前高度:'${window.innerHeight}`);
+
+        //螢幕寬度
+        console.log(`螢幕寬度:${window.screen.width}`)
+        console.log(`螢幕高度:${window.screen.height}`)
+
+        //document物件
+        document.write('Hi')
+
+        //取得title
+        document.title="我是新的標題"
+        document.write(document.title);
+        
+
+        //點選按鈕跳轉頁面
+        document.querySelector('#btn1').addEventListener('click',()=>{
+            window,location.href="https://www.youtube.com/";
+        })
+    </script>
+</body>
+</html>
